@@ -111,7 +111,7 @@ header {
 	min-height: 470px;
 	position: relative;
 }
-.banner-img {
+.banner__img {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -119,15 +119,17 @@ header {
 	object-fit: cover;
 	object-position: center;
 }
-/* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
+/* Carousel pour la bannière */
 /* Gestion des fleches du carrousel */
 #banner .arrow {
 	position: absolute;
+    background-color: transparent;
+    border: none;
 }
-#banner .arrow_left {
+#banner .arrow__left {
 	left: 10px;
 }
-#banner .arrow_right {
+#banner .arrow__right {
 	right: 10px;
 }
 /* Gestion des points du carrousel */
