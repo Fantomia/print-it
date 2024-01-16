@@ -14,7 +14,7 @@ const slides = [
 	{
 		"image":"./assets/images/slideshow/slide4.png",
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
-	}
+	},
 ]
 
 const arrowLeft = document.querySelector(".arrow__left");
@@ -46,6 +46,19 @@ arrowRight.addEventListener("click", () => {
     updateBanner();
 });
 
+function createDots () {
+	const dotList = document.querySelector(".dots");
+	for (let i=0; i < slides.length; i++) {
+	// boucle qui s'éxecute tant que le nombre de dots est inférieure à slides.length
+		const dot = document.createElement("div");
+		// création d'une div
+		dot.setAttribute("class", "dot");
+		// ajout de la classe "dot" à la div précédemment créée
+		dotList.appendChild(dot);
+		// ajout de l'élément "dot" comme enfant de l'élément "dots"
+	}
+};
+
 function updateDots(indexItem) {
 	const dots = document.querySelectorAll(".dot");
     dots.forEach((dot, i) => {
@@ -68,3 +81,6 @@ function updateBanner() {
     tagLine.innerHTML = slides[indexItem].tagLine;
 	// change le texte en fonction de la tagLine associé à la slide actuelle
 }
+
+createDots();
+updateDots(indexItem);
